@@ -49,9 +49,9 @@ export function VideoInputForm(props: VideoInputFormProps) {
 
     await ffmpeg.writeFile("input.mp4", await fetchFile(video));
 
-    ffmpeg.on("progress", (progress) => {
-      console.log("Convert progress: " + Math.round(progress.progress * 100));
-    });
+    // ffmpeg.on("progress", (progress) => {
+    //   console.log("Convert progress: " + Math.round(progress.progress * 100));
+    // });
 
     await ffmpeg.exec([
       "-i",
